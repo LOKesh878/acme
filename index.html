@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .sub-slider .owl-next {
+        span {
+          position: absolute;
+          top: 11rem;
+          font-size: 5rem;
+          right: 5rem;
+        }
+      }
+      .sub-slider .owl-prev {
+        span {
+          position: absolute;
+          top: 11rem;
+          font-size: 5rem;
+          left: 1rem;
+        }
+      }
+      .img-slider .owl-next {
+        span {
+          position: absolute;
+          bottom: 14rem;
+          font-size: 5rem;
+          right: 4rem;
+        }
+      }
+      .img-slider .owl-prev {
+        span {
+          position: absolute;
+          bottom: 13rem;
+          font-size: 5rem;
+          left: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container-xl">
+      <div
+        class="container-xl flex bg-black mx-auto width-100 text-white justify-center items-center h-11 text-lg font-normal"
+      >
+        spend R1000 or more and get free shipping
+      </div>
+      <div
+        class="hidden container-xl md:flex md:max-lg:hidden justify-end gap-4 items-center border-b-2 border-gray-0"
+      >
+        <div class="font-medium">Sign In</div>
+        <div><img src="assets/images/flagicon.png" alt="" width="40px" /></div>
+      </div>
+      <nav class="bg-white h-2">
+        <button class="md:hidden md:max-lg:block p-10" onclick="menu()">
+          <ion-icon
+            name="menu-outline"
+            class="text-gray-500 text-5xl"
+          ></ion-icon>
+        </button>
+        <div
+          class="flex items-center justify-center gap-10  h-24 md:max-lg:flex md:max-lg:flex-col"
+        >
+          <a href="" class="mt-4 md:max-lg:flex md:max-lg:mb-40">
+            <img
+              class="md:max-lg:w-24"
+              src="https://i.pinimg.com/originals/a5/bd/71/a5bd71c6fa502ce680af6a28bb2308b1.png"
+              width="200px"
+              alt=""
+            />
+          </a>
+
+          <div
+            class="hidden md:flex md:max-lg:hidden justify-center gap-10 items-center uppercase text-md font-bold"
+          >
+            <a class="text-red-600">sale</a>
+            <a href="#">men</a>
+            <a href="#">women</a>
+            <a href="#">501@jeans</a>
+            <a href="#" class="text-[#3A7396]">collections</a>
+          </div>
+          
+          <div id="nav-dialog" class="fixed md:hidden inset-0 bg-white z-10">
+            <div id="navbar" class="flex justify-center mt-0">
+              <a href="">
+                <img
+                  src="https://i.pinimg.com/originals/a5/bd/71/a5bd71c6fa502ce680af6a28bb2308b1.png"
+                  width="200px"
+                  alt=""
+                />
+              </a>
+              <button class="md:hidden md:max-lg:block absolute left-0 bottom-30" onclick="menu()">
+                <ion-icon
+                  name="close-outline"
+                  class="text-gray-500 text-5xl"
+                ></ion-icon>
+              </button>
+            </div>
+            <div
+              class="mt-2 flex flex-col justify-center items-center text-3xl font-bold "
+            >
+              <a class="text-red-600">sale</a>
+              <a href="#">men</a>
+              <a href="#">women</a>
+              <a href="#">501@jeans</a>
+              <a href="#" class="text-[#3A7396]">collections</a>
+            </div>
+          </div>
+          <div class="hidden md:flex md:max-lg:flex gap- md:max-lg:w-full  md:max-lg:mb-32 ">
+            <div>
+              <ion-icon name="search-outline" class="text-2xl"></ion-icon>
+            </div>
+            <input
+              type="search"
+              name="price"
+              id="price"
+              class="outline-none border-b-2 w-64 md:max-lg:w-full"
+              placeholder="Tell us what are looking for you"
+            />
+            <div class="w-10 text-2xl font-bold relative">
+              <ion-icon name="heart-outline"></ion-icon
+              ><span
+                class="w-4 font-light bg-red-600 rounded-full text-center text-white absolute bottom-4 text-sm right-2 inline-block"
+                >0</span
+              >
+            </div>
+            <div class="w-10 text-2xl font-bold">
+              <ion-icon name="bag-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hidden md:flex md:max-lg:hidden justify-center items-center gap-x-20 bg-[#EEEEEE] h-10 capitalize underline text-gray-400"
+        >
+          <a href="#">men's sales</a>
+          <a href="#">women's sale</a>
+          <a href="#">footwear</a>
+          <a href="#">winterwear sale</a>
+        </div>
+      </nav>
+    </header>
+    <section class="container-xl mt-32 h-50">
+      <div class="banner owl-carousel owl-theme">
+        <div class="item">
+          <img
+            src="https://levi.in/cdn/shop/files/100RedTabDesktop.jpg?v=1718867551&width=2000"
+            alt=""
+          />
+        </div>
+        <div class="item">
+          <img
+            src="https://levi.in/cdn/shop/files/Flat_50_extra10_oFF_Desktop.jpg?v=1719811102"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <div class="container-xl mt-2 flex flex-col gap-4">
+      <div
+        class="text-4xl flex justify-center items-center font-bold card-header h-4 uppercase"
+      >
+        prices you will love
+      </div>
+      <div class="flex justify-center gap-3 uppercase text-lg font-bold">
+        <a href="#" class="text-red-600">eoss</a>
+        <a href="#" class="">jeans</a>
+        <a href="#" class="">t-shirts</a>
+      </div>
+    </div>
+
+    <!-- first-slider -->
+
+    <div class="container-lg px-5 mt-4">
+      <div class="slider owl-carousel owl-theme">
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span>
+              <span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span>
+              <span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span>
+              <span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span>
+              <span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-xl px-4">
+      <div class="columns-3 mt-4">
+        <img
+          class="w-full"
+          src="https://cdn.shopify.com/s/files/1/0805/5128/0930/files/A70870076_01_Style_shot_b7fbbbc4-6b60-4703-b21c-43ec59e262a2.jpg?v=1712742857&width=750"
+          height="509px"
+          alt=""
+        />
+        <img
+          class="w-full"
+          src="https://cdn.shopify.com/s/files/1/0805/5128/0930/files/A70870048_01_Style_shot_f58f632b-ec44-43c8-9c3e-bdc0a8c11b2e.jpg?v=1712742843&width=750"
+          height="509px"
+          alt=""
+        />
+        <img
+          class="w-full"
+          src="https://cdn.shopify.com/s/files/1/0805/5128/0930/files/A13230058_01_Style_Shot_3f19e493-8c93-48be-821b-997975d28633.jpg?v=1697611061&width=750"
+          height="509px"
+          alt=""
+        />
+      </div>
+    </div>
+    <div
+      class="container-xl mt-4 flex justify-center font-bold text-4xl items-center uppercase"
+    >
+      winter favs
+    </div>
+
+    <!-- sub-slider -->
+
+    <div class="container-xl px-5 mt-4">
+      <div class="sub-slider owl-carousel owl-theme">
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="items w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              class="rounded-t-lg relative"
+              src="https://levi.in/cdn/shop/files/A70870032_04_Side_d236a220-0e68-4e41-a2f6-5e75c0a59a95.jpg?v=1712742850"
+              alt=""
+            />
+            <span
+              class="inline-block bg-white w-8 h-8 text-center pt-1 rounded-full absolute top-2 left-2 font-bold text-lg"
+              ><ion-icon name="heart-outline"></ion-icon
+            ></span>
+          </a>
+          <div class="text-lg font-medium pl-1">
+            <h4>Product name over</h4>
+            <p>two line</p>
+            <p>
+              <span>R799.00</span> <span class="text-gray-300">R799.00</span
+              ><span class="text-red-600">10% OFF</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-xl px-5">
+      <img
+        class="w-full"
+        src="https://levi.in/cdn/shop/files/June_EOSS_Website_LayoutFootwear-desktop.jpg?v=1720085147"
+        alt=""
+      />
+    </div>
+
+    <div class="container mx-auto mt-4">
+      <div class="img-slider owl-carousel owl-theme">
+        <div class="items">
+          <img
+            src="https://levi.in/cdn/shop/files/WK_1_2SHIRTS.jpg?v=1717568587"
+            alt=""
+          />
+        </div>
+        <div class="items">
+          <img
+            src="https://levi.in/cdn/shop/files/WK_1_2CHINOS.jpg?v=1717568586"
+            alt=""
+          />
+        </div>
+        <div class="items">
+          <img
+            src="https://levi.in/cdn/shop/files/WK_1_2BASIC_TEES.jpg?v=1717568586"
+            alt=""
+          />
+        </div>
+        <div class="items">
+          <img
+            src="https://levi.in/cdn/shop/files/WK_1_2TOPS_WOMEN.jpg?v=1717568587"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!-- video section -->
+
+    <div class="container mx-auto">
+      <video class="w-full p-10" autoplay loop controls>
+        <source src="assets/images/adb.webm" type="video/mp4" />
+
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- footer-section -->
+    <div class="container-xl  bg-[#F3F3F3]">
+      <div
+        class="flex md:max-lg:flex-col  md:max-lg:w-full md:max-lg:justify-center  md:max-sm:flex-row   md:max:-lg:items-center justify-center gap-24  w-full h-full p-4 text-[#8D8D8D] capitalize text-lg"
+      >
+        <div class="flex flex-col md:max-lg:justify-center items-center">
+          <a href="" class="font-bold text-lg uppercase text-black"
+            >Quick Links</a
+          >
+          <a href="" class="">Mens jeans</a>
+          <a href="">women's jeans</a> 
+          <a href=""> mens't-shirts</a>
+          <a href="">women's top</a>
+          <a href="">footwear</a>
+          <a href="">men's jackets</a>
+          <a href="">collection</a>
+          <a href="">sustainability</a>
+        </div>
+        <div class="flex flex-col items-center">
+          <a href="" class="font-bold uppercase text-xl text-black">supports</a>
+          <a href="">Mens jeans</a>
+          <a href="">women's jeans</a>
+          <a href=""> mens't-shirts</a>
+          <a href="">women's top</a>
+          <a href="">footwear</a>
+          <a href="">men's jackets</a>
+        </div>
+        <div class="flex flex-col items-center">
+          <a href="" class="font-bold text-xl uppercase text-black">contact</a>
+          <p class="font-bold capitalize">for customer care</p>
+          <a href="" class="font-light">
+            <ion-icon name="mail-outline"></ion-icon> service@co.za</a
+          >
+          <p class="font-bold capitalize">for store queries</p>
+          <a href="" class="font-light">
+            <ion-icon name="call-outline"></ion-icon>0816444351</a
+          >
+          <p class="pt-2">call timings</p>
+          <p>mon-sat:10AM-6PM</p>
+        </div>
+        <div class="flex flex-col lowercase items-center">
+          <p class="font-md capitalize">for customer care</p>
+          <a href="" class="font-light">
+            <ion-icon name="mail-outline"></ion-icon> service@co.za</a
+          >
+          <p class="font-bold capitalize">for store queries</p>
+          <a href="" class="font-light">
+            <ion-icon name="call-outline"></ion-icon> 0816444351</a
+          >
+        </div>
+        <div class="flex flex-col gap-3 h-60 ml-10 items-center">
+          <p class="font-bold uppercase text-black">It's all about the perks</p>
+          <input
+            class="border-b border-black outline-none bg-[#F3F3F3]"
+            type="email"
+            placeholder="Email Address"
+          />
+          <button
+            class="bg-black text-white font-bold text-xl text-center p-4 w-64 rounded"
+          >
+            Subscribe
+
+          </button>
+          <p class="text-center p-0 text-sm text-black">see our privacy policy</p>
+        </div>
+      </div>
+      <hr class="border-1  w-full text-[#8D8D8D]">
+      <div id="lower-footer" class=" flex justify-between items-center h-24">
+        <div class="flex flex-start w-full">
+          <ul class="flex w-full gap-x-16 text-[#8D8D8D] capitalize font-semibold">
+            <li>@2024,Levis south aferica store </li>
+            <li>privacy policy</li>
+            <li>terms of use</li>
+            <li>returns</li>
+          </ul>
+        </div>
+        <div class=" flex justify-center gap-5 ml-34 w-64 items-center text-2xl">
+          <a href=""><ion-icon name="logo-pinterest"></ion-icon></a>
+          <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+          <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+      </div>
+      <div class="flex justify-between p-2">
+        <div class=" capitalize font-bold text-black">
+          more about levi's south aferica store
+        </div>
+        <div>
+          <p class="capitalize font-bold text-[#8D8D8D]">powered by <span class="text-red-600 font-semibold  ">eCompelte</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".banner").owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          600: {
+            items: 1,
+            nav: false,
+          },
+          1000: {
+            items: 1,
+            nav: false,
+          },
+        },
+      });
+      $(".slider").owlCarousel({
+        loop: true,
+         dots:false,
+      
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 6,
+          },
+        },
+      });
+      $(".sub-slider").owlCarousel({
+        loop: true,
+        navigation: true,
+        dots: false,
+        margin: 5,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 6,
+          },
+         
+        },
+      });
+      $(".img-slider").owlCarousel({
+        loop: true,
+        navigation: true,
+        dots: false,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

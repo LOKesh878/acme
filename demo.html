@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <nav class="bg-black text-white h-20 flex justify-center gap-8">
+        <div id="navbar" class="flex justify-center md:space-x-64 gap-12 items-center">
+            <a href="" class="text-2xl font-bold border p-3 border-white">Tailwind css</a>
+            <ul class="flex gap-12 items-center md:hidden">
+                <li><a href="" class="font-bold text-lg list-none ">Home</a></li>
+                <li><a href="" class="font-bold text-lg list-none ">Description</a></li>
+                <li><a href="" class="font-bold text-lg list-none ">About</a></li>
+                <li><a href="" class="font-bold text-lg list-none ">Contact</a></li>
+            </ul>
+            <button class="text-6xl   hidden md:block" onclick="menu1()"><ion-icon name="menu" class="font"></ion-icon></button>
+        </div>
+        <div id="nav-res" class="flex  md:fixed inset-0 bg-red-400 z-10 bottom-64"> 
+            <ul class="flex gap-12 items-center ">
+                <li><a href="" class="font-bold text-lg list-none ">Home</a></li>
+                <li><a href="" class="font-bold text-lg list-none ">Description</a></li>
+                <li><a href="" class="font-bold text-lg list-none ">About</a></li>
+                <li><a href="" class="font-bold text-lg list-none ">Contact</a></li>
+            </ul>
+            <button class="text-6xl   hidden md:block" onclick="menu1()"><ion-icon name="close-outline" class="font"></ion-icon></button>
+        </div>
+      
+    
+    </nav> -->
+    <div class="text-green-400 text-6xl min-h-screen min-w-screen flex my-40 mx-40 flex-col sm:flex-row
+    justify-center items-center sm:bg-slate-900 sm:text-white ">
+    <h1>hello</h1>
+      <button
+        class="bg-white relative after:content-['hello'] after:absolute after:bg-green-300 after:inset-0 after:z-0 after:blur before:absolute before:bg-blue-300 before:-top-10 before:-left-10 before:h-full before:w-full before:z-0 before:blur text-slate-900 p-10 mx-10 my-10 group w-4/6 hover:opacity-50 duration-300 flex items-center gap-4"
+      >
+        <h1 class="z-10">Button</h1>
+        <span class="z-10 h-10 w-10 bg-amber-800 group-hover:rotate-45"></span>
+      </button>
+      <button
+      class="bg-white relative after:content-['hello'] after:absolute after:bg-rose-300 after:inset-0 after:z-0 after:blur before:absolute before:bg-amber-300 before:-top-10 before:-left-10 before:h-full before:w-full before:z-0 before:blur text-slate-900 p-10 mx-10 my-10 group w-4/6 hover:opacity-50 duration-300 flex items-center gap-4"
+    >
+      <h1 class="z-10">Button</h1>
+      <span class="z-10 h-10 w-10 bg-amber-800 group-hover:rotate-45"></span>
+    </button>
+    </div>
+
+     <!-- peer and group hover Examples -->
+      <div class="container mx-auto py-10">
+    <div class="peer group grid h-20 w-20 mx-48 bg-blue-400 justify-center  items-center hover:bg-purple-400 transition-colors duration-300 ease-in-out deay-300">
+        <div class=" h-5 w-5 bg-black group-hover:bg-blue-500 transition-colors duration-300 ease-in-out deay-300"></div>
+        <div class="h-5 w-5 bg-black group-hover:bg-orange-500 transition-colors duration-300 ease-in-out deay-300"></div>
+    </div>
+    <div class="animate-ping h-5 w-5 bg-green-400 peer-hover:bg-orange-500 transition-colors duration-300 ease-in-out deay-300"></div>
+   <div class="animate-spin w-20 h-1 font-semibold tex-8xl ease-in delay-1000">🥰</div>
+   <div class="animate-bounce font-semibold tex-8xl ease-in delay-1000">Hit </div>
+   <div class="animate-ping w-5 font-semibold tex-8xl ease-in delay-1000">🤣</div>
+   <div class="animate-pulse font-semibold tex-8xl ease-in delay-1000">🥰</div>
+</div>
+       <!-- grid layout -->
+        <div class="grid grid-cols-2 gap-10 p-5 min-[400px]:grid-cols-3">
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+            <div class="w-full aspect-video bg-purple-400"></div>
+
+        </div>
+        <div>
+            <div class="w-20 h-10 rounded-lg shadow-[0_0_10px_theme('colors.purpule.700')]"></div>
+        </div>
+
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
